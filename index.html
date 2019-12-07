@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <body>
+        <button id='activator'>Click to sketch</button>
+        <div id="container"></div>
+
+        
+    </body> 
+    <script>
+            let cntr = document.getElementById('container')
+            let btn = document.getElementById('activator');
+            btn.addEventListener('click', function () {
+              let rows = 5;
+              let columns = 6;
+              let row = document.createElement( 'div' );
+              row.setAttribute('class', 'row');
+              for (let i = 0; i < rows; i++){
+                let cell = document.createElement('div');
+                cell.setAttribute('class', 'cell');
+                row.appendChild(cell);
+              cntr.appendChild(row);
+              }
+                  
+              });  
+              //figure out why one cell per click is generating
+  
+             
+          </script>
+    </head>
+</html>
