@@ -5,28 +5,59 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     <body>
         <button id='activator'>Click to sketch</button>
-        <div id="container"></div>
+        <div id='container' class='empty'>
+            
+        </div>
+        <div id="testBox" class='grid'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
 
         
     </body> 
     <script>
+            let rows = 5;
+            let columns = 5;
             let cntr = document.getElementById('container')
             let btn = document.getElementById('activator');
+            let testBox = document.getElementById('testBox');
+            let boxString = 'auto';
+            let boxStringAdd ='';
+            
+            
+
+            let boxSizeText = ('auto ');
+            let boxColumns = (boxSizeText.repeat(columns) + ';')
+            let gridSize = columns * rows;
+        /*
+             for (let i=0; i<columns; i++){
+                       boxStringAdd += 'auto ';
+                        }
+
+                let newBoxString = (boxStringAdd + ';');
+                cntr.setAttribute('class', 'grid');
+                //figure out why newBoxString isn't being passed as string
+                cntr.style.setProperty('grid-template-columns', newBoxString);
+            
+            */
+
             btn.addEventListener('click', function () {
-              let rows = 5;
-              let columns = 6;
-              let row = document.createElement( 'div' );
-              row.setAttribute('class', 'row');
-              for (let i = 0; i < rows; i++){
-                let cell = document.createElement('div');
-                cell.setAttribute('class', 'cell');
-                row.appendChild(cell);
-              cntr.appendChild(row);
-              }
-                  
+                   ;   
+
+                
+                for (let i=0; i < gridSize; i++){
+                    let cell = document.createElement( 'div' );
+                    cell.className = 'square';
+                    cntr.appendChild(cell);   
+                    }
+                    
+                
               });  
-              //figure out why one cell per click is generating
-  
+                
+              
              
           </script>
     </head>

@@ -1,8 +1,11 @@
 #container {
     border-style: solid;
     border-color: black;
-    height: 500px;
-    width: 500px;
+    height: 960px;
+    width: 960px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    
 }
 
 button {
@@ -11,11 +14,16 @@ button {
     color: white;
 }
 
-.row {
-    border-style: solid;
-    border-color: black;
+.grid {
+    
     height: 50px;
     width: 80px;
     margin: 10px;
     
+}
+.square {
+    border: 1px solid black;
+    margin: 5px;
+    height: auto;
+    width: auto;
 }
