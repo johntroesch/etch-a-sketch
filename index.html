@@ -19,40 +19,36 @@
         
     </body> 
     <script>
-            let rows = 5;
-            let columns = 5;
+            let rows = 16;
+            let columns = 16;
             let cntr = document.getElementById('container')
             let btn = document.getElementById('activator');
             let testBox = document.getElementById('testBox');
-            let boxString = 'auto';
-            let boxStringAdd ='';
+            let across;
+            let cell;
             
-            
-
-            let boxSizeText = ('auto ');
-            let boxColumns = (boxSizeText.repeat(columns) + ';')
             let gridSize = columns * rows;
-        /*
-             for (let i=0; i<columns; i++){
-                       boxStringAdd += 'auto ';
-                        }
-
-                let newBoxString = (boxStringAdd + ';');
-                cntr.setAttribute('class', 'grid');
-                //figure out why newBoxString isn't being passed as string
-                cntr.style.setProperty('grid-template-columns', newBoxString);
-            
-            */
+    
 
             btn.addEventListener('click', function () {
-                   ;   
-
-                
-                for (let i=0; i < gridSize; i++){
+                      //adds n number of rows
+                for (let i=0; i<rows; i++) {
+                    across = document.createElement( 'div');
+                    across.className = 'row';
+                    cntr.appendChild(across);
+                    //adds n number of columns
+                    for (let i=0; i < columns; i++){
                     let cell = document.createElement( 'div' );
                     cell.className = 'square';
-                    cntr.appendChild(cell);   
+                    across.appendChild(cell); 
+                    //adds mouseover color change  
+                    cell.addEventListener('mouseover', function (){
+                    cell.style.backgroundColor = 'black';
+                }) 
                     }
+                }
+                
+                
                     
                 
               });  

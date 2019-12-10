@@ -2,10 +2,7 @@
     border-style: solid;
     border-color: black;
     height: 960px;
-    width: 960px;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    
+    width: 960px;   
 }
 
 button {
@@ -23,7 +20,12 @@ button {
 }
 .square {
     border: 1px solid black;
-    margin: 5px;
-    height: auto;
-    width: auto;
+    margin: 2px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+}
+
+.row {
+    margin: 0px;
 }
