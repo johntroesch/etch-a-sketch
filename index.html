@@ -4,50 +4,46 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
     <body>
-        <button id='activator'>Click to sketch</button>
+        <button id='activator' input type='number'>Click to sketch</button>
         <div id='container' class='empty'>
             
         </div>
-        <div id="testBox" class='grid'>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-        </div>
+        
 
         
     </body> 
     <script>
-            let rows = 16;
-            let columns = 16;
+
+            
             let cntr = document.getElementById('container')
             let btn = document.getElementById('activator');
             let testBox = document.getElementById('testBox');
             let across;
             let cell;
             
-            let gridSize = columns * rows;
+            
     
 
             btn.addEventListener('click', function () {
-                      //adds n number of rows
+                
+                let rows=prompt("Grid size (squares per side)?")
+                   let columns = rows; 
+                      
                 for (let i=0; i<rows; i++) {
                     across = document.createElement( 'div');
                     across.className = 'row';
                     cntr.appendChild(across);
-                    //adds n number of columns
+                    
                     for (let i=0; i < columns; i++){
                     let cell = document.createElement( 'div' );
                     cell.className = 'square';
                     across.appendChild(cell); 
-                    //adds mouseover color change  
+                      
                     cell.addEventListener('mouseover', function (){
                     cell.style.backgroundColor = 'black';
                 }) 
                     }
                 }
-                
                 
                     
                 
